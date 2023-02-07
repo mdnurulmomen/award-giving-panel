@@ -57,7 +57,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>M</b>eena</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Meena</b>Award</span>
+      <span class="logo-lg"><b>Award</b>CMS</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -142,7 +142,6 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            {{-- 
             <li class="@if(Route::currentRouteName() == 'admin.ages.enabled.show') active @endif">
               <a href="{{route('admin.ages.enabled.show')}}">
                 <i class="fa fa-circle-o text-red"></i> Age Variation 
@@ -166,7 +165,6 @@
                 <i class="fa fa-circle-o text-aqua"></i> Media Type 
               </a>
             </li> 
-            --}}
 
             <li class="@if(Route::currentRouteName() == 'admin.award-settings.show') active @endif">
               <a href="{{ route('admin.award-settings.show') }}">
@@ -194,17 +192,6 @@
             <i class="fa fa-image"></i> <span>Photos</span>
           </a>
         </li>
-
-      {{-- 
-        <li class="@if(Route::currentRouteName() == 'admin.mails.show') active @endif">
-          <a href="{{ route('admin.mails.show') }}">
-            <i class="fa fa-envelope"></i> <span>Mails</span>
-          </a>
-        </li> 
-          --}}
-
-        
-        
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -259,8 +246,6 @@
         // toastr.info('Outside Message');
 
     @endif
-    
-
 </script>
 
 </body>

@@ -13,14 +13,6 @@ use Intervention\Image\Facades\Image as ImageIntervention;
 
 class AdminController extends Controller
 {
-    /*
-    public function __construct()
-    {
-    	$this->middleware('guest:admin')->only(['showLoginPage', 'submitLoginForm']);
-    	$this->middleware('auth:admin')->except(['showLoginPage', 'submitLoginForm']);
-    }
-    */
-
     public function showLoginPage()
     {
     	return view('admin.login');
@@ -46,7 +38,6 @@ class AdminController extends Controller
 
     public function showDashboardMethod()
     {
-        // $currentAwardSettings = DB::table('award_settings')->get()->first();
         $currentAwardSettings = AwardSetting::first();
         $currentYear = Year::find($currentAwardSettings->current_year)->name ?? 'None';
 

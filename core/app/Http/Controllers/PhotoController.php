@@ -18,22 +18,10 @@ class PhotoController extends Controller
     {
     	$request->validate([
     		'title'=>'required',
-            /*
-            'category_id'=>'required|numeric',
-            'content_type_id'=>'required|numeric',
-            'age_id'=>'required|numeric',
-            'photo_file'=>'required'
-            */
     	]);
 
     	$newPhoto = new Photo();
     	$newPhoto->title = ucfirst($request->title);
-    	/*
-        $newPhoto->category_id = $request->category_id;
-    	$newPhoto->content_type_id = $request->content_type_id;
-    	$newPhoto->age_id = $request->age_id;
-    	$newPhoto->description = $request->description;
-        */
     	$newPhoto->save();
 
         if ($request->hasFile('photo_file')) {
@@ -57,20 +45,9 @@ class PhotoController extends Controller
 
     	$request->validate([
             'title'=>'required',
-            /*
-            'category_id'=>'required|numeric',
-            'content_type_id'=>'required|numeric',
-            'age_id'=>'required|numeric'
-            */
         ]);
 
         $objectToUpdate->title = ucfirst($request->title);
-        /*
-        $objectToUpdate->category_id = $request->category_id;
-        $objectToUpdate->content_type_id = $request->content_type_id;
-        $objectToUpdate->age_id = $request->age_id;
-        $objectToUpdate->description = $request->description;
-        */
         $objectToUpdate->save();
 
         if ($request->hasFile('photo_file')) {
