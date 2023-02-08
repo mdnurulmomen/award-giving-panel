@@ -66,3 +66,7 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth:admin'], function(){
 
 	Route::get('/download', 'ApplicationController@exportToExcel')->name('admin.applications.download');
 });
+
+Route::fallback(function () {
+	return redirect()->route('admin.login');
+});
